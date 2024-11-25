@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Resume Builder</h1>
+    </header>
+    <main>
+        <section class="form-section">
+            <h2>Enter Your Details</h2>
+            <form id="resume-form">
+                <label for="name"><strong>Full Name:</strong></label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email"><strong>Email:</strong></label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone"><strong>Phone: </strong></label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="skills"><strong>Skills:</strong></label>
+                <textarea id="skills" name="skills" placeholder="Comma-separated skills"></textarea>
+
+                <!-- Education Section -->
+                <label for="education"><strong>Education:</strong></label>
+                <div id="education-container">
+                    <div class="education-entry">
+                        <input type="text" placeholder="School/University Name" class="education-institution" required>
+                        <input type="text" placeholder="Start Year" class="education-start" required>
+                        <input type="text" placeholder="End Year" class="education-end" required>
+                        <input type="text" placeholder="CGPA/Percentage" class="education-cgpa" required>
+                        <button type="button" class="remove-field">Remove Field</button>
+                    </div>
+                </div>
+                <div class="add-container">
+                    <button type="button" id="add-education" class="add-button">Add Education</button>
+                </div>
+
+                <!-- Project Section -->
+                <label for="projects"><strong>Projects:</strong></label>
+                <div id="projects-container">
+                    <div class="project-entry">
+                        <input type="text" placeholder="Project Name" class="project-name" required>
+                        <input type="text" placeholder="Start Year" class="project-start" required>
+                        <input type="text" placeholder="End Year" class="project-end" required>
+                        <textarea placeholder="Project Description" class="project-description"></textarea>
+                        <button type="button" class="remove-field">Remove Field</button>
+                    </div>
+                </div>
+                <div class="add-container">
+                    <button type="button" id="add-project" class="add-button">Add Project</button>
+                </div>
+
+                <!-- Experience Section -->
+                <label for="experience"><strong>Experience (Internship) :</strong> </label>
+                <div id="experience-container">
+                    <div class="experience-entry">
+                        <input type="text" placeholder="Company Name" class="experience-company" required>
+                        <input type="text" placeholder="Job Title" class="experience-job-title" required>
+                        <input type="text" placeholder="Start Year" class="experience-start" required>
+                        <input type="text" placeholder="End Year" class="experience-end" required>
+                        <textarea placeholder="Job Description" class="experience-description"></textarea>
+                        <button type="button" class="remove-field">Remove Field</button>
+                    </div>
+                </div>
+                <div class="add-container">
+                    <button type="button" id="add-experience" class="add-button">Add Experience</button>
+                </div>
+
+                <label for="template">Choose a Template:</label>
+                <select id="template" name="template">
+                    <option value="classic">Classic</option>
+                    <option value="modern">Modern</option>
+                </select>
+
+                <button type="button" id="generate-resume">Generate Resume</button>
+            </form>
+        </section>
+        <section class="preview-section">
+            <h2>Resume Preview</h2>
+            <div id="resume-preview"></div>
+            <br>
+            <button id="download-resume">Download PDF</button>
+        </section>
+     <footer>
+     </footer>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

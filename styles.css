@@ -1,0 +1,207 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+    flex-wrap: wrap;
+}
+
+.form-section, .preview-section {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 45%;
+}
+
+/* Smaller font sizes */
+form label {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+}
+
+form input, form textarea, form select, form button {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 0.7rem;
+    cursor: pointer;
+}
+
+/* Add Button */
+.add-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+.add-button:hover {
+    background-color: #0056b3;
+}
+
+/* Remove Button */
+.remove-field {
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.remove-field:hover {
+    background-color: #cc0000;
+}
+
+/* Resume Preview */
+/* Reset styles for the PDF layout */
+#resume-preview {
+    padding: 0;
+    border: none;
+    background-color: white; /* Make the background white */
+    color: black; /* Ensure the text is black */
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+}
+
+/* Remove any unnecessary styles for the preview */
+.template-classic, .template-modern {
+    border: none; /* Remove borders */
+    background: transparent; /* Ensure no background color */
+    padding: 0; /* Remove padding */
+}
+
+/* No extra styles for template-specific classes when generating PDF */
+.template-classic h1, .template-modern h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.template-classic p, .template-classic li,
+.template-modern p, .template-modern li {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.template-modern h3 {
+    margin-top: 1rem;
+}
+
+
+/* Classic Template */
+.template-classic {
+    font-family: "Times New Roman", Times, serif;
+    border: 2px solid #000;
+    padding: 1rem;
+    background-color: #f9f9f9;
+}
+
+.template-classic h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.template-classic p, .template-classic li {
+    font-size: 1rem;
+}
+
+/* Modern Template */
+.template-modern {
+    font-family: Arial, sans-serif;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    background-color: #fff;
+    color: #333;
+    border-radius: 8px;
+}
+
+.template-modern h1 {
+    font-size: 2.5rem;
+    color: #007bff;
+    margin-bottom: 0.5rem;
+}
+
+.template-modern h3 {
+    color: #555;
+    margin-top: 1rem;
+}
+
+.template-modern ul {
+    list-style-type: square;
+}
+
+.template-modern p, .template-modern li {
+    font-size: 1.1rem;
+}
+
+/* Education & Experience Fields */
+.education-entry input, .experience-entry input, .experience-entry textarea {
+    font-size: 0.9rem; /* Reduce font size of input fields */
+}
+
+/* Add Field Container */
+.add-container {
+    text-align: center;
+}
+
+/* Style for Education and Experience sections */
+#education-container, #experience-container {
+    margin-bottom: 1rem;
+}
+
+.education-entry input, .experience-entry input {
+    font-size: 0.9rem; /* Ensure input fields are smaller */
+    padding: 0.5rem;
+}
+
+/* Template Class for Experience */
+.experience-entry {
+    margin-bottom: 1rem;
+}
+
+.experience-entry input, .experience-entry textarea {
+    font-size: 0.9rem; /* Set smaller font size for experience fields */
+    padding: 0.5rem;
+}
+
+.experience-entry textarea {
+    height: 80px; /* Set a fixed height for the description box */
+    resize: vertical;
+}
